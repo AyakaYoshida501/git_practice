@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>つよただ式関数電卓</title>
+  <meta charset="UTF-8">
+  
+
+</head>
+<body>
+ <!-- なおちゃんのに足したところ①ボタン要素(ボタンを使わずにすべての要素が入力されたら答えがでるようにしたいのだけど、思いつかなくて...教えてほしい！)-->
+  <!-- なおちゃんのに足したところ①outputのところのid（nameでの取得の方法を教えてほしい...!）-->
+ <!-- なおちゃんのをつかえていないところ①outputのnameのところ-->
+ <!-- なおちゃんのをつかえていないところ①outputのforのところ-->
+
+<!-- 今のままだと、数字の入力が整数しかできなくて、少数の計算ができない...からテキスト入力に変えたらいけそう...?-->
+
+  <h1>つよただ式関数電卓</h1>
+    <form name="form1">
+        <p>四則計算・べき乗・余剰</p>
+        <input type="number" name="num1" id="num1">
+        <select name="operator">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mul">×</option>
+            <option value="div">÷</option>
+            <option value="power">^</option> <!--べき乗-->
+            <option value="mod">%</option> <!--剰余-->
+        </select>
+        <input type="number" name="num2" id="num2">
+        =
+        <input type="button" value="出力" onclick="onButtonClick()">
+
+        <output name="result" for="num1 num2" id="output">0</output>
+    </form>
+
+    <form oninput="result.value = Math.sqrt(Number(num1.value))">
+        <p>平方根</p>
+          <input type="number" name="num1" id="num1" size="5"> =
+          <output name="result">0</output>
+    </form>
+<script src="dentaku.js"></script>
+</body>
+</html> 
