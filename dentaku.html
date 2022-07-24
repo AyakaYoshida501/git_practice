@@ -3,10 +3,13 @@
 <head>
   <title>つよただ式関数電卓</title>
   <meta charset="UTF-8">
+
+
 </head>
 <body>
+
   <h1>つよただ式関数電卓</h1>
-    <form>
+    <form name="form1" id="calculation">
         <p>四則計算・べき乗・余剰</p>
         <input type="number" name="num1" id="num1">
         <select name="operator">
@@ -18,15 +21,16 @@
             <option value="mod">%</option> <!--剰余-->
         </select>
         <input type="number" name="num2" id="num2">
-         = 
-        <output name="result" for="num1 num2">0</output>
+        =
+        <output name="result" for="num1 num2" id="output">0</output>
     </form>
 
-    <form oninput="result.value = Math.sqrt(Number(num1.value))">
+    <form name="form2" id="root">
         <p>平方根</p>
-          <input type="number" name="num1" id="num1" size="5"> =
-          <output name="result">0</output>
+          <input type="number" name="num" id="num" size="5"> =
+          <output name="result" for="num" id="rootOutput">0</output>
     </form>
-    
+
+<script src="dentaku.js"></script>
 </body>
-</html>
+</html>  
